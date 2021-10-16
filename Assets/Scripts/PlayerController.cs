@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    private float movementSpeed = 20;
-    private float gravity = -5;
+    [SerializeField]private float movementSpeed = 20;
+    [SerializeField]private float gravity = -5;
     private CharacterController myController = null;
     private Vector3 moveDirection = Vector3.zero;
     void Awake()
@@ -22,7 +22,11 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Vertical") * movementSpeed, gravity, 0));
-        myController.Move(moveDirection * Time.deltaTime);
+         
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal") * movementSpeed, gravity, Input.GetAxis("Vertical") * movementSpeed));
+            myController.Move(moveDirection * Time.deltaTime);
+        }
     }
 }
