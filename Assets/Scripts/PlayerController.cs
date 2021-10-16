@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 rotationDirection = Vector3.zero;
     //OTHER STUFF
     private CharacterController myController = null;
+    
 
 
     // Start is called before the first frame update
@@ -32,15 +33,15 @@ public class PlayerController : MonoBehaviour
         rotationDirection = new Vector3(0, Input.GetAxis("Horizontal") * rotationSpeed, 0);
         transform.Rotate(rotationDirection * Time.deltaTime, Space.Self);
         //JUMP
+        
+        //void Update()
+        //{
 
+        //    if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        //    {
+        //        moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal") * movementSpeed, gravity, Input.GetAxis("Vertical") * movementSpeed));
+        //        myController.Move(moveDirection * Time.deltaTime);
+        //    }
+        //}
     }
-    //void Update()
-    //{
-         
-    //    if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-    //    {
-    //        moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal") * movementSpeed, gravity, Input.GetAxis("Vertical") * movementSpeed));
-    //        myController.Move(moveDirection * Time.deltaTime);
-    //    }
-    //}
 }
