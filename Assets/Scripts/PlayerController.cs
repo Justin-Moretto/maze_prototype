@@ -32,16 +32,33 @@ public class PlayerController : MonoBehaviour
         //ROTATE
         rotationDirection = new Vector3(0, Input.GetAxis("Horizontal") * rotationSpeed, 0);
         transform.Rotate(rotationDirection * Time.deltaTime, Space.Self);
-        //JUMP
-        
-        //void Update()
-        //{
+    }
 
-        //    if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-        //    {
-        //        moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal") * movementSpeed, gravity, Input.GetAxis("Vertical") * movementSpeed));
-        //        myController.Move(moveDirection * Time.deltaTime);
-        //    }
-        //}
+    void OnTriggerEnter(Collider other)
+    {
+        // Play around with this, Can you keep track of
+        // how many times you enter a trigger and print
+        // the total every time?
+        Debug.Log("You entered " + other.gameObject.name);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Debug.Log(collision.collider.name) is great to get more infos
+        //This section was used for exercises 6-2 and 6-3
+        Debug.Log(collision.collider.name);
+        /*
+        if (collision.collider.name == "Red Cube")
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("Ouch");
+            Debug.Log("You have received 100 dmg.");
+            currentHealth -= 100;
+        }
+        if (collision.collider.name == "Purple Cube")
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("You have received 20 dmg.");
+            currentHealth -= 20;
+        }*/
     }
 }
