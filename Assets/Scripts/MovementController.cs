@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    public float moveSpeed = 15;
-    public float jumpHeight = 3;
-    public float gravity = -12;
+    public float moveSpeed = 8;
+    public float jumpHeight = 2.5f;
+    public float gravity = -20;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
