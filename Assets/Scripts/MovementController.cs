@@ -47,13 +47,29 @@ public class MovementController : MonoBehaviour
         character.Move(velocity * Time.deltaTime);
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         // Play around with this, Can you keep track of
         // how many times you enter a trigger and print
         // the total every time?
         Debug.Log("You entered " + other.gameObject.name);
+
+        if (other.gameObject.tag == "MovingPlatform")
+        {
+            Debug.Log("Parented");
+            transform.parent = other.transform;
+        }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "MovingPlatform")
+        {
+            Debug.Log("Unparented");
+            transform.parent = null;
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         //Debug.Log(collision.collider.name) is great to get more infos
