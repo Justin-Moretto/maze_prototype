@@ -7,39 +7,54 @@ public class MovingPlatform : MonoBehaviour
 	public float x = 0f;
 	public float y = 0f;
 	public float z = 1f;
-	public float leretour = 5f;
+	public float leRetour = 5f;
 
+	public GameObject Player;
 
-	void Start()
+ //   private void OnTriggerEnter(Collider other)
+ //   {
+ //       if(other.gameObject == Player)
+ //       {
+	//		Debug.Log("Player is on Platform");
+	//		Player.transform.parent = transform;
+ //       }
+ //   }
+ //   private void OnTriggerExit(Collider other)
+ //   {
+	//	if (other.gameObject == Player)
+	//	{
+	//		Debug.Log("Player is off Platform");
+	//		Player.transform.parent = null;
+	//	}
+	//}
+
+    void Start()
 	{
 		//Debug.Log("Counter has started."); //Uncomment for logs
 	}
-	private void OnCollisionEnter(Collision collision)
+
+    void FixedUpdate()
     {
-		collision.collider.transform.SetParent(transform);
-		//Debug.Log(collision.collider.name) is great to get more infos
-		Debug.Log(collision.collider.name);
-	}
+        counter += Time.deltaTime;
+        float limit = leRetour * 2f;
+        if (counter > 0)
+        {
+            //Debug.Log("Counter has passed 0"); //Uncomment for logs and erase logs at void Start
+            //transform.position += new Vector3(x, y, z) * Time.deltaTime;
+            transform.Translate(new Vector3(x, y, z) * Time.deltaTime);
+        }
 
-	void Update()
-	{
-		counter += Time.deltaTime;
-		float limit = leretour * 2f;
-		if (counter > 0)
-		{
-			//Debug.Log("Counter has passed 0"); //Uncomment for logs and erase logs at void Start
-			transform.position += new Vector3(x, y, z) * Time.deltaTime;
-		}
+        if (counter > leRetour)
+        {
+            //Debug.Log("Counter has passed 5"); //Uncomment for logs
+            //transform.position -= new Vector3(2 * x, 2 * y, 2 * z) * Time.deltaTime;
+            transform.Translate(new Vector3(2 * x, 2 * y, 2 * z) * Time.deltaTime * -1);
 
-		if (counter > leretour)
-		{
-			//Debug.Log("Counter has passed 5"); //Uncomment for logs
-			transform.position -= new Vector3(2*x, 2*y, 2*z) * Time.deltaTime;
 
-			if (counter > limit)
-			{
-				counter = 0;
-			}
-		}
-	}
+            if (counter > limit)
+            {
+                counter = 0;
+            }
+        }
+    }
 }
