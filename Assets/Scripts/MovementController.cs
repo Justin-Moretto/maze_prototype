@@ -16,9 +16,12 @@ public class MovementController : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
 
+    private Inventory inventory;
+
     void Awake()
     {
         character = GetComponent<CharacterController>();
+        inventory = gameObject.GetComponent<Inventory>();
     }
 
     void Update()
@@ -49,15 +52,18 @@ public class MovementController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Play around with this, Can you keep track of
-        // how many times you enter a trigger and print
-        // the total every time?
-        Debug.Log("You entered " + other.gameObject.name);
+        var collision = other.gameObject.tag;
 
-        if (other.gameObject.tag == "MovingPlatform")
+        if (collision == "MovingPlatform")
         {
-            Debug.Log("Parented");
             transform.parent = other.transform;
+        } else if (collision == "Key")
+        {
+            inventory.AddKey();
+            Destroy(other.gameObject);
+        } else if (collision == "Door" && inventory.hasKey)
+        {
+            Destroy(other.gameObject);
         }
     }
 
@@ -65,7 +71,7 @@ public class MovementController : MonoBehaviour
     {
         if (other.gameObject.tag == "MovingPlatform")
         {
-            Debug.Log("Unparented");
+            //Debug.Log("Unparented");
             transform.parent = null;
         }
     }

@@ -11,23 +11,6 @@ public class MovingPlatform : MonoBehaviour
 
 	public GameObject Player;
 
- //   private void OnTriggerEnter(Collider other)
- //   {
- //       if(other.gameObject == Player)
- //       {
-	//		Debug.Log("Player is on Platform");
-	//		Player.transform.parent = transform;
- //       }
- //   }
- //   private void OnTriggerExit(Collider other)
- //   {
-	//	if (other.gameObject == Player)
-	//	{
-	//		Debug.Log("Player is off Platform");
-	//		Player.transform.parent = null;
-	//	}
-	//}
-
     void Start()
 	{
 		//Debug.Log("Counter has started."); //Uncomment for logs
