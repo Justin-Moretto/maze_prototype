@@ -17,6 +17,7 @@ public class MovementController : MonoBehaviour
     private bool isGrounded;
 
     private Inventory inventory;
+    public Vector3 checkpoint;
 
     void Awake()
     {
@@ -48,6 +49,8 @@ public class MovementController : MonoBehaviour
         
         velocity.y += gravity * Time.deltaTime;
         character.Move(velocity * Time.deltaTime);
+
+        if (character.transform.position.y < -60) Respawn();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -61,19 +64,30 @@ public class MovementController : MonoBehaviour
         {
             inventory.AddKey();
             Destroy(other.gameObject);
+            Debug.Log("Key Acquired!");
         } else if (collision == "Door" && inventory.hasKey)
         {
             Destroy(other.gameObject);
+        } else if (collision == "Lava")
+        {
+            Respawn();
+        } else if (collision == "Checkpoint")
+        {
+            checkpoint = character.transform.position;
+            Debug.Log("checkpoint reached!");
         }
+    }
+
+    private void Respawn()
+    {
+        transform.position = checkpoint;
+        transform.Translate(0, 5, 0);
+        transform.parent = null;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "MovingPlatform")
-        {
-            //Debug.Log("Unparented");
             transform.parent = null;
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
