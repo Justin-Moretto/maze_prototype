@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovementController : MonoBehaviour
 {
@@ -17,12 +18,17 @@ public class MovementController : MonoBehaviour
     private bool isGrounded;
 
     private Inventory inventory;
+    private GameObject UI;
     public Vector3 checkpoint;
+    private GameObject _lastCheckpoint;
+    private GameObject _unlockedDoor;
+
 
     void Awake()
     {
         character = GetComponent<CharacterController>();
         inventory = gameObject.GetComponent<Inventory>();
+        UI = GameObject.Find("UI_Text");
     }
 
     void Update()
@@ -65,7 +71,7 @@ public class MovementController : MonoBehaviour
             case "Key":
                 inventory.AddKey();
                 Destroy(_gameObject);
-                Debug.Log("Key Acquired!");
+                DisplayMessage(UI, "Key Acquired");
                 break;
             case "Door":
                 if (inventory.hasKey)
@@ -73,20 +79,31 @@ public class MovementController : MonoBehaviour
                     var door = _gameObject.GetComponent<AnimateDoor>();
                     inventory.UseKey();
                     door.Open();
-                    Debug.Log("Key used to open door!");
+                    DisplayMessage(UI, "The Key Unlocks the Door");
+                    _unlockedDoor = _gameObject;
+                } else if (_gameObject != _unlockedDoor)
+                {
+                    DisplayMessage(UI, "It's Locked");
                 }
                 break;
             case "Lava":
                 Respawn();
                 break;
+            case "Bullet":
+                Respawn();
+                break;
             case "Checkpoint":
                 checkpoint = character.transform.position;
-                Debug.Log("Checkpoint Reached!");
+                if (_gameObject != _lastCheckpoint)
+                {
+                    _lastCheckpoint = _gameObject;
+                    DisplayMessage(UI, "Checkpoint Reached");
+                }
                 break;
             case "Gem":
                 inventory.gems++;
                 Destroy(_gameObject);
-                Debug.Log("Gem Acquired! " + inventory.gems + " / 5");
+                DisplayMessage(UI, "Gem Acquired " + inventory.gems + " / 5");
                 break;
         }
     }
@@ -101,6 +118,13 @@ public class MovementController : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
             transform.parent = null;
+    }
+
+    private void DisplayMessage(GameObject UI, string text)
+    {
+        UI.GetComponent<Text>().text = text;
+        UI.GetComponent<Animator>().SetBool("FadeIn", true);
+        Debug.Log(text);
     }
 
 }

@@ -6,18 +6,17 @@ public class shootBullets : MonoBehaviour
 {
     public GameObject bullet;
 
-    [SerializeField]
-    float firingSpeed = 500;
+    public float firingSpeed = 500;
+    public float projectileSpeed = 6;
+    
     float shotInterval;
     float timer;
 
-    // Start is called before the first frame update
     void Awake()
     {
         shotInterval = 500 / firingSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer = timer + Time.deltaTime;
@@ -25,7 +24,8 @@ public class shootBullets : MonoBehaviour
 
         if (timer >= shotInterval)
         {
-            Instantiate(bullet, transform.transform);
+            var shot = Instantiate(bullet, transform.transform);
+            shot.GetComponent<BulletMove>().velocity = projectileSpeed;
             timer = 0;
         }
     }

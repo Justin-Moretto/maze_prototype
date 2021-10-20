@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class BulletMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    public float velocity = 6;
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        gameObject.transform.Translate(new Vector3(5, 0, 0) * Time.deltaTime);
+        gameObject.transform.Translate(new Vector3(velocity, 0, 0) * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
