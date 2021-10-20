@@ -12,6 +12,7 @@ TagManager:
   - Turret
   - Gem
   - Bullet
+  - FinalDoor
   layers:
   - Default
   - TransparentFX

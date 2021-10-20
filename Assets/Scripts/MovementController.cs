@@ -105,6 +105,25 @@ public class MovementController : MonoBehaviour
                 Destroy(_gameObject);
                 DisplayMessage(UI, "Gem Acquired " + inventory.gems + " / 5");
                 break;
+            case "FinalDoor":
+                if (inventory.gems >= 5)
+                {
+                    Destroy(_gameObject);
+                    //TODO: activate final door animation
+                } else
+                {
+                    if (inventory.gems == 4)
+                    {
+                        DisplayMessage(UI, $"{5 - inventory.gems} Gem Required");
+                    } else
+                    {
+                        DisplayMessage(UI, $"{5 - inventory.gems} Gems Required");
+                    }
+                }
+                break;
+            case "EndZone":
+                //TODO: Transition to Victory Scene
+                break;
         }
     }
 
