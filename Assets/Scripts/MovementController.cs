@@ -55,26 +55,34 @@ public class MovementController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var collision = other.gameObject.tag;
+        GameObject _gameObject = other.gameObject;
 
-        if (collision == "MovingPlatform")
+        switch (_gameObject.tag)
         {
-            transform.parent = other.transform;
-        } else if (collision == "Key")
-        {
-            inventory.AddKey();
-            Destroy(other.gameObject);
-            Debug.Log("Key Acquired!");
-        } else if (collision == "Door" && inventory.hasKey)
-        {
-            Destroy(other.gameObject);
-        } else if (collision == "Lava")
-        {
-            Respawn();
-        } else if (collision == "Checkpoint")
-        {
-            checkpoint = character.transform.position;
-            Debug.Log("checkpoint reached!");
+            case "MovingPlatform":
+                transform.parent = other.transform;
+                break;
+            case "Key":
+                inventory.AddKey();
+                Destroy(_gameObject);
+                Debug.Log("Key Acquired!");
+                break;
+            case "Door":
+                if (inventory.hasKey)
+                {
+                    var door = _gameObject.GetComponent<AnimateDoor>();
+                    inventory.UseKey();
+                    door.Open();
+                    Debug.Log("Key used to open door!");
+                }
+                break;
+            case "Lava":
+                Respawn();
+                break;
+            case "Checkpoint":
+                checkpoint = character.transform.position;
+                Debug.Log("Checkpoint Reached!");
+                break;
         }
     }
 
@@ -90,24 +98,4 @@ public class MovementController : MonoBehaviour
             transform.parent = null;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        //Debug.Log(collision.collider.name) is great to get more infos
-        //This section was used for exercises 6-2 and 6-3
-        Debug.Log(collision.collider.name);
-        /*
-        if (collision.collider.name == "Red Cube")
-        {
-            Destroy(collision.gameObject);
-            Debug.Log("Ouch");
-            Debug.Log("You have received 100 dmg.");
-            currentHealth -= 100;
-        }
-        if (collision.collider.name == "Purple Cube")
-        {
-            Destroy(collision.gameObject);
-            Debug.Log("You have received 20 dmg.");
-            currentHealth -= 20;
-        }*/
-    }
 }
