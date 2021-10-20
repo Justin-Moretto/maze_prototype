@@ -83,6 +83,11 @@ public class MovementController : MonoBehaviour
                 checkpoint = character.transform.position;
                 Debug.Log("Checkpoint Reached!");
                 break;
+            case "Gem":
+                inventory.gems++;
+                Destroy(_gameObject);
+                Debug.Log("Gem Acquired! " + inventory.gems + " / 5");
+                break;
         }
     }
 

@@ -9,6 +9,8 @@ TagManager:
   - Door
   - Lava
   - Checkpoint
+  - Turret
+  - Gem
   layers:
   - Default
   - TransparentFX
