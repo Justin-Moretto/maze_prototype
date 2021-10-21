@@ -253,6 +253,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59a255b4e3790eb47b8d47fb2ff5c3ea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438322660430583114, guid: 59a255b4e3790eb47b8d47fb2ff5c3ea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3287132560616373905, guid: 59a255b4e3790eb47b8d47fb2ff5c3ea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5091404539720712108, guid: 59a255b4e3790eb47b8d47fb2ff5c3ea,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
