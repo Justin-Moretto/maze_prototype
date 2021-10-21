@@ -5001,6 +5001,11 @@ PrefabInstance:
       propertyPath: m_VertexStreams.Array.data[2]
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2606461932359846779, guid: a1094f569495852479fa1e9e0de63be5,
+        type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2730171085209717461, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
       propertyPath: simulationSpeed
@@ -5184,7 +5189,7 @@ PrefabInstance:
     - target: {fileID: 4044859189472594198, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.12
+      value: 1.251
       objectReference: {fileID: 0}
     - target: {fileID: 4044859189472594198, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
