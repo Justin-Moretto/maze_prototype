@@ -7080,6 +7080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawbridge: {fileID: 680062617}
+  lever: {fileID: 0}
 --- !u!1001 &919673000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8072,10 +8073,7 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1374489601553186216, guid: 0931bf2b8f8b2894982109df1858b224, type: 3}
-    - {fileID: 5930788773396421541, guid: 0931bf2b8f8b2894982109df1858b224, type: 3}
-    - {fileID: 8532742504883253633, guid: 0931bf2b8f8b2894982109df1858b224, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0931bf2b8f8b2894982109df1858b224, type: 3}
 --- !u!4 &976505732 stripped
 Transform:
@@ -19470,8 +19468,7 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7454211156186960732, guid: a1cd6c44a14edd3469a78b613e255df8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1cd6c44a14edd3469a78b613e255df8, type: 3}
 --- !u!1001 &8090066976098153586
 PrefabInstance:
