@@ -43,7 +43,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.56810045, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.42647052, b: 0.75, a: 1}
   m_Intensity: 8
   m_Range: 8
   m_SpotAngle: 30
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 7478629347511525947}
   - component: {fileID: 4624522324021647089}
   m_Layer: 0
-  m_Name: Torch
+  m_Name: Torch_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,6 +210,21 @@ PrefabInstance:
       propertyPath: LightsModule.light
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5201373237067989971, guid: 32085158e57ab534798dab798f4736d9,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime0
+      value: 6554
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201373237067989971, guid: 32085158e57ab534798dab798f4736d9,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 26214
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201373237067989971, guid: 32085158e57ab534798dab798f4736d9,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime2
+      value: 48380
+      objectReference: {fileID: 0}
     - target: {fileID: 7825415977275150268, guid: 32085158e57ab534798dab798f4736d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -242,9 +257,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7989294796983180094, guid: 32085158e57ab534798dab798f4736d9,
         type: 3}
+      propertyPath: m_VertexStreams.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989294796983180094, guid: 32085158e57ab534798dab798f4736d9,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2fb64abf990ceac4c890ed9d88b8653c, type: 2}
+    - target: {fileID: 7989294796983180094, guid: 32085158e57ab534798dab798f4736d9,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989294796983180094, guid: 32085158e57ab534798dab798f4736d9,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989294796983180094, guid: 32085158e57ab534798dab798f4736d9,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8002942973935082128, guid: 32085158e57ab534798dab798f4736d9,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.r
