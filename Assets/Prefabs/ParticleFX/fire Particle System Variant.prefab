@@ -84,7 +84,7 @@ PrefabInstance:
     - target: {fileID: 2606461932359846779, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
       propertyPath: m_VertexStreams.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2606461932359846779, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
@@ -99,12 +99,12 @@ PrefabInstance:
     - target: {fileID: 2606461932359846779, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
       propertyPath: m_VertexStreams.Array.data[1]
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2606461932359846779, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
       propertyPath: m_VertexStreams.Array.data[2]
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2606461932359846779, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
@@ -344,7 +344,7 @@ PrefabInstance:
     - target: {fileID: 5593284768944457388, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
       propertyPath: m_Name
-      value: fire Particle System
+      value: fire Particle System Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5593284768944457388, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
