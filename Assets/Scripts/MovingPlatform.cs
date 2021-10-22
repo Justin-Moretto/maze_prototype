@@ -9,7 +9,7 @@ public class MovingPlatform : MonoBehaviour
 	public float z = 1f;
 	public float leRetour = 5f;
 
-	public GameObject Player;
+	//public GameObject Player;
 
     void Start()
 	{

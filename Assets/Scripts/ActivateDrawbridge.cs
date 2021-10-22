@@ -7,19 +7,10 @@ public class ActivateDrawbridge : MonoBehaviour
     public GameObject drawbridge;
     public GameObject lever;
 
-    public void Awake()
-    {
-        lever.GetComponent<Animator>();
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        drawbridge.SetActive(true);
-        //activate drawbridge animation here
+        drawbridge.GetComponent<Animator>().SetBool("Open", true);
+        lever.GetComponent<Animator>().SetBool("LeverCanPlay", true);
     }
 
-    /*public void ActivateLever()
-    {
-        lever.SetBool("LeverCanPlay");
-    }*/
 }

@@ -130,8 +130,9 @@ public class MovementController : MonoBehaviour
     private void Respawn()
     {
         transform.position = checkpoint;
-        transform.Translate(0, 5, 0);
+        transform.Translate(0, 2, 0);
         transform.parent = null;
+        velocity.y -= 40;
     }
 
     private void OnTriggerExit(Collider other)
