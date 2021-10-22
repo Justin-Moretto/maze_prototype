@@ -9,8 +9,13 @@ public class ActivateDrawbridge : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        drawbridge.GetComponent<Animator>().SetBool("Open", true);
         lever.GetComponent<Animator>().SetBool("LeverCanPlay", true);
+        Invoke("OpenDrawbridge", 1.8f);
+        //TODO: add SFX of lever and drawbridge lowering
     }
 
+    void OpenDrawbridge()
+    {
+        drawbridge.GetComponent<Animator>().SetBool("Open", true);
+    }
 }

@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MazeLevel.unity
+    guid: b8b0820f18127894a9006a492f6e6295
+  - enabled: 1
+    path: Assets/Scenes/PrefabGarden.unity
+    guid: 19b1779656b17ae4bae7faa6f638b0bb
   m_configObjects: {}

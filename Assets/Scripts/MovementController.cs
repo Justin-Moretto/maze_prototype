@@ -132,7 +132,12 @@ public class MovementController : MonoBehaviour
                 }
                 break;
             case "EndZone":
-                //TODO: Transition to Victory Scene
+                //TODO: add a nice scene transition effect
+                UnityEditor.SceneManagement.EditorSceneManager.LoadScene("PrefabGarden");
+                Debug.Log("You win");
+                break;
+            case "Lever":
+                DisplayMessage(UI, "Lever Activated");
                 break;
         }
     }
@@ -140,12 +145,15 @@ public class MovementController : MonoBehaviour
     private void Respawn()
     {
         transform.position = checkpoint;
-        transform.Translate(0, 2, 0);
+        transform.Translate(0, 3, 0);
         transform.parent = null;
-        velocity.y -= 40;
+        transform.rotation = Quaternion.Euler(0, -90, 0);
+        velocity.y -= 20;
 
         int i = Random.Range(0, respawnMessages.Count);
         DisplayMessage(UI, respawnMessages[i]);
+
+        //TODO: add screen transition and sound effect 
     }
 
     private void OnTriggerExit(Collider other)
