@@ -23,6 +23,16 @@ public class MovementController : MonoBehaviour
     private GameObject _lastCheckpoint;
     private GameObject _unlockedDoor;
 
+    private List<string> respawnMessages = new List<string>
+    {
+        "You Died.",
+        "Ouf. That was Embarassing",
+        "Newsflash: Lava kills you.",
+        "Come on, the Game's not that Hard.",
+        "Lmaoo git gud noob",
+        "Maybe Stick to playing Candy Crush",
+        "A Real Gamer Wouldn't Have Died There"
+    };
 
     void Awake()
     {
@@ -79,7 +89,7 @@ public class MovementController : MonoBehaviour
                     var door = _gameObject.GetComponent<AnimateDoor>();
                     inventory.UseKey();
                     door.Open();
-                    DisplayMessage(UI, "The Key Unlocks the Door");
+                    DisplayMessage(UI, "Door Unlocked");
                     _unlockedDoor = _gameObject;
                 } else if (_gameObject != _unlockedDoor)
                 {
@@ -133,6 +143,9 @@ public class MovementController : MonoBehaviour
         transform.Translate(0, 2, 0);
         transform.parent = null;
         velocity.y -= 40;
+
+        int i = Random.Range(0, respawnMessages.Count);
+        DisplayMessage(UI, respawnMessages[i]);
     }
 
     private void OnTriggerExit(Collider other)
