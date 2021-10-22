@@ -344,7 +344,7 @@ PrefabInstance:
     - target: {fileID: 5593284768944457388, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
       propertyPath: m_Name
-      value: fire Particle System
+      value: fire Particle System Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5593284768944457388, guid: a1094f569495852479fa1e9e0de63be5,
         type: 3}
