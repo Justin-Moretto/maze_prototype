@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MazeLevel.unity
+    path: Assets/Scenes/MainScene.unity
     guid: b8b0820f18127894a9006a492f6e6295
   - enabled: 1
     path: Assets/Scenes/PrefabGarden.unity
