@@ -19,6 +19,7 @@ public class MovementController : MonoBehaviour
 
     private Inventory inventory;
     private GameObject UI;
+    private DisplayGems _finalDoor;
     public Vector3 checkpoint;
     private GameObject _lastCheckpoint;
     private GameObject _unlockedDoor;
@@ -39,6 +40,7 @@ public class MovementController : MonoBehaviour
         character = GetComponent<CharacterController>();
         inventory = gameObject.GetComponent<Inventory>();
         UI = GameObject.Find("UI_Text");
+        _finalDoor = GameObject.Find("DoorEnd").GetComponent<DisplayGems>();
     }
 
     void Update()
@@ -81,7 +83,7 @@ public class MovementController : MonoBehaviour
             case "Key":
                 inventory.AddKey();
                 Destroy(_gameObject);
-                DisplayMessage(UI, "Key Acquired");
+                DisplayMessage("Key Acquired");
                 break;
             case "Door":
                 if (inventory.hasKey)
@@ -89,11 +91,11 @@ public class MovementController : MonoBehaviour
                     var door = _gameObject.GetComponent<AnimateDoor>();
                     inventory.UseKey();
                     door.Open();
-                    DisplayMessage(UI, "Door Unlocked");
+                    DisplayMessage("Door Unlocked");
                     _unlockedDoor = _gameObject;
                 } else if (_gameObject != _unlockedDoor)
                 {
-                    DisplayMessage(UI, "It's Locked");
+                    DisplayMessage("It's Locked");
                 }
                 break;
             case "Lava":
@@ -107,27 +109,30 @@ public class MovementController : MonoBehaviour
                 if (_gameObject != _lastCheckpoint)
                 {
                     _lastCheckpoint = _gameObject;
-                    DisplayMessage(UI, "Checkpoint Reached");
+                    DisplayMessage("Checkpoint Reached");
                 }
                 break;
             case "Gem":
                 inventory.gems++;
                 Destroy(_gameObject);
-                DisplayMessage(UI, "Gem Acquired " + inventory.gems + " / 5");
+                DisplayMessage("Gem Acquired " + inventory.gems + " / 5");
+                string color = _gameObject.name.Split(char.Parse("_"))[1];
+                _finalDoor.AddGem(color);
                 break;
             case "FinalDoor":
                 if (inventory.gems >= 5)
                 {
-                    Destroy(_gameObject);
-                    //TODO: activate final door animation
+                    var door = _gameObject.GetComponent<AnimateDoor>();
+                    door.Open();
+                    DisplayMessage("Door Unlocked");
                 } else
                 {
                     if (inventory.gems == 4)
                     {
-                        DisplayMessage(UI, $"{5 - inventory.gems} Gem Required");
+                        DisplayMessage($"{5 - inventory.gems} Gem Required");
                     } else
                     {
-                        DisplayMessage(UI, $"{5 - inventory.gems} Gems Required");
+                        DisplayMessage($"{5 - inventory.gems} Gems Required");
                     }
                 }
                 break;
@@ -137,7 +142,7 @@ public class MovementController : MonoBehaviour
                 Debug.Log("You win");
                 break;
             case "Lever":
-                DisplayMessage(UI, "Lever Activated");
+                DisplayMessage("Lever Activated");
                 break;
         }
     }
@@ -151,7 +156,7 @@ public class MovementController : MonoBehaviour
         velocity.y -= 20;
 
         int i = Random.Range(0, respawnMessages.Count);
-        DisplayMessage(UI, respawnMessages[i]);
+        DisplayMessage(respawnMessages[i]);
 
         //TODO: add screen transition and sound effect 
     }
@@ -161,7 +166,7 @@ public class MovementController : MonoBehaviour
             transform.parent = null;
     }
 
-    private void DisplayMessage(GameObject UI, string text)
+    private void DisplayMessage(string text)
     {
         UI.GetComponent<Text>().text = text;
         UI.GetComponent<Animator>().SetBool("FadeIn", true);
