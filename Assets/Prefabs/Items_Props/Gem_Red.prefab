@@ -102,9 +102,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2430291183542457986}
   - component: {fileID: 527743255271909260}
-  m_Layer: 0
-  m_Name: Gem_Parent
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: Gem_Red
+  m_TagString: Gem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,7 +354,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e45a2d56f87d8874aa937f5bfadc2d17,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e45a2d56f87d8874aa937f5bfadc2d17,
         type: 3}

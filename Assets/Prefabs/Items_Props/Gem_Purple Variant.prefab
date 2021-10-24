@@ -7,20 +7,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1070974772, guid: fe62727e74c665d4aab6d926fb1c1641, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2430291183542457986, guid: fe62727e74c665d4aab6d926fb1c1641,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2430291183542457986, guid: fe62727e74c665d4aab6d926fb1c1641,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7
+      value: 0.089999676
       objectReference: {fileID: 0}
     - target: {fileID: 2430291183542457986, guid: fe62727e74c665d4aab6d926fb1c1641,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -46.002377
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 2430291183542457986, guid: fe62727e74c665d4aab6d926fb1c1641,
         type: 3}
@@ -30,7 +34,7 @@ PrefabInstance:
     - target: {fileID: 2430291183542457986, guid: fe62727e74c665d4aab6d926fb1c1641,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2430291183542457986, guid: fe62727e74c665d4aab6d926fb1c1641,
         type: 3}
@@ -40,7 +44,7 @@ PrefabInstance:
     - target: {fileID: 2430291183542457986, guid: fe62727e74c665d4aab6d926fb1c1641,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2430291183542457986, guid: fe62727e74c665d4aab6d926fb1c1641,
         type: 3}
@@ -65,7 +69,17 @@ PrefabInstance:
     - target: {fileID: 2565943464927527080, guid: fe62727e74c665d4aab6d926fb1c1641,
         type: 3}
       propertyPath: m_Name
-      value: Gem_Purple
+      value: Gem_Purple Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565943464927527080, guid: fe62727e74c665d4aab6d926fb1c1641,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565943464927527080, guid: fe62727e74c665d4aab6d926fb1c1641,
+        type: 3}
+      propertyPath: m_TagString
+      value: Gem
       objectReference: {fileID: 0}
     - target: {fileID: 3472785452098825588, guid: fe62727e74c665d4aab6d926fb1c1641,
         type: 3}
