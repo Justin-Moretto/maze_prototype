@@ -4628,6 +4628,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597750327}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &606690597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2557493717743279832, guid: f0d0b1144c3e17248a88ff6c5842787c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2557493716618539252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &606690599
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606690597}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.26976, y: 10.927809, z: 8.046988}
+  m_Center: {x: 0.39302826, y: -4.9639044, z: -1.0583181}
 --- !u!1001 &613198013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19326,6 +19345,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorEnd
       objectReference: {fileID: 0}
+    - target: {fileID: 2557493717743279832, guid: f0d0b1144c3e17248a88ff6c5842787c,
+        type: 3}
+      propertyPath: m_TagString
+      value: FinalDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 2557493717743279833, guid: f0d0b1144c3e17248a88ff6c5842787c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19380,6 +19404,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883001106241323632, guid: f0d0b1144c3e17248a88ff6c5842787c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0d0b1144c3e17248a88ff6c5842787c, type: 3}
