@@ -23,14 +23,15 @@ public class MovementController : MonoBehaviour
     public Vector3 checkpoint;
     private GameObject _lastCheckpoint;
     private GameObject _unlockedDoor;
+    private BlackoutTransition _blackoutTransition;
 
     private List<string> respawnMessages = new List<string>
     {
         "You Died.",
-        "Ouf. That was Embarassing",
+        "Ouf. That was Embarassing...",
         "Newsflash: Lava kills you.",
         "Come on, the Game's not that Hard.",
-        "Lmaoo git gud noob",
+        "Lmaoo git gud",
         "Maybe Stick to playing Candy Crush",
         "A Real Gamer Wouldn't Have Died There"
     };
@@ -41,6 +42,7 @@ public class MovementController : MonoBehaviour
         inventory = gameObject.GetComponent<Inventory>();
         UI = GameObject.Find("UI_Text");
         _finalDoor = GameObject.Find("DoorEnd").GetComponent<DisplayGems>();
+        _blackoutTransition = GetComponentInChildren<BlackoutTransition>();
     }
 
     void Update()
@@ -99,10 +101,12 @@ public class MovementController : MonoBehaviour
                 }
                 break;
             case "Lava":
-                Respawn();
+                _blackoutTransition.Play();
+                Invoke("Respawn", 1f);
                 break;
             case "Bullet":
-                Respawn();
+                _blackoutTransition.Play();
+                Invoke("Respawn", 1f);
                 break;
             case "Checkpoint":
                 checkpoint = character.transform.position;
@@ -125,6 +129,7 @@ public class MovementController : MonoBehaviour
                     var door = _gameObject.GetComponent<AnimateDoor>();
                     door.Open();
                     DisplayMessage("Door Unlocked");
+                    _unlockedDoor = _gameObject;
                 } else
                 {
                     if (inventory.gems == 4)
@@ -150,15 +155,13 @@ public class MovementController : MonoBehaviour
     private void Respawn()
     {
         transform.position = checkpoint;
-        transform.Translate(0, 3, 0);
+        transform.Translate(0, 4, 0);
         transform.parent = null;
         transform.rotation = Quaternion.Euler(0, -90, 0);
         velocity.y -= 20;
 
         int i = Random.Range(0, respawnMessages.Count);
         DisplayMessage(respawnMessages[i]);
-
-        //TODO: add screen transition and sound effect 
     }
 
     private void OnTriggerExit(Collider other)
@@ -172,5 +175,4 @@ public class MovementController : MonoBehaviour
         UI.GetComponent<Animator>().SetBool("FadeIn", true);
         Debug.Log(text);
     }
-
 }
