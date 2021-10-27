@@ -107,8 +107,8 @@ GameObject:
   - component: {fileID: 1374489601553186216}
   - component: {fileID: 5930788773396421541}
   - component: {fileID: 8532742504883253633}
-  - component: {fileID: 308485961}
   - component: {fileID: 308485960}
+  - component: {fileID: 315052691}
   m_Layer: 0
   m_Name: Door_Archway
   m_TagString: Door
@@ -221,19 +221,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8000145, y: 2.7589836, z: 2.3999999}
   m_Center: {x: 2.5933447, y: 0.8522129, z: 0}
---- !u!65 &308485961
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4672457029029425207}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.9867053, y: 17.402916, z: 6.593693}
-  m_Center: {x: 0.03288865, y: -1.2533398, z: -2.0883667}
 --- !u!114 &308485960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +233,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90798a882a1db424a96805132329f009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors: []
+  Doors:
+  - {fileID: 3186661069066087169}
+  - {fileID: 6838339353785435043}
+--- !u!65 &315052691
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4672457029029425207}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.9867053, y: 17.402916, z: 6.593693}
+  m_Center: {x: 0.03288865, y: -1.2533398, z: -2.0883667}
 --- !u!1 &6631904083329678535
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +489,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_Left
       objectReference: {fileID: 0}
+    - target: {fileID: 2842505801283833951, guid: 49fb21baf379d7c41aee46da54044406,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     - target: {fileID: 3186661069165873893, guid: 49fb21baf379d7c41aee46da54044406,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -542,6 +549,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7028773793316647728, guid: 49fb21baf379d7c41aee46da54044406,
+        type: 3}
+      propertyPath: Doors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028773793316647728, guid: 49fb21baf379d7c41aee46da54044406,
+        type: 3}
+      propertyPath: Doors.Array.data[0]
+      value: 
+      objectReference: {fileID: 3186661069066087169}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49fb21baf379d7c41aee46da54044406, type: 3}
 --- !u!4 &3186661069066087169 stripped
@@ -557,10 +574,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5448289319613835917}
     m_Modifications:
+    - target: {fileID: 2124365677004656130, guid: fd1c6182f77ad1c4c9bb14848c218c74,
+        type: 3}
+      propertyPath: Doors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124365677004656130, guid: fd1c6182f77ad1c4c9bb14848c218c74,
+        type: 3}
+      propertyPath: Doors.Array.data[0]
+      value: 
+      objectReference: {fileID: 6838339353785435043}
     - target: {fileID: 6173724553633924260, guid: fd1c6182f77ad1c4c9bb14848c218c74,
         type: 3}
       propertyPath: m_Name
       value: Door_Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173724553633924260, guid: fd1c6182f77ad1c4c9bb14848c218c74,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 6838339352826043934, guid: fd1c6182f77ad1c4c9bb14848c218c74,
         type: 3}

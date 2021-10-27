@@ -51,6 +51,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &8263940798358248284
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873892665935713503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.859085, y: 1.2049607, z: 6.3230276}
+  m_Center: {x: -7.911558, y: 0.07861497, z: 0.14701474}
 --- !u!1001 &818296582512232715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58,11 +71,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246010415712734821}
     m_Modifications:
-    - target: {fileID: 746110361597539638, guid: 9909572cff7f5154e8dc679ffa4f12f6,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 37b94775c11c38b40bd3ab3cb16f410d, type: 2}
     - target: {fileID: 1250394428249330915, guid: 9909572cff7f5154e8dc679ffa4f12f6,
         type: 3}
       propertyPath: m_Name
@@ -122,21 +130,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878453730246757977, guid: 9909572cff7f5154e8dc679ffa4f12f6,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.0628104
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878453730246757977, guid: 9909572cff7f5154e8dc679ffa4f12f6,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.9039746
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878453730246757977, guid: 9909572cff7f5154e8dc679ffa4f12f6,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.8500002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9909572cff7f5154e8dc679ffa4f12f6, type: 3}
@@ -202,26 +195,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -8.96
       objectReference: {fileID: 0}
-    - target: {fileID: 2475910118090563478, guid: 0bf318be9ed995e46a6f6796c3302693,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.064601
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475910118090563478, guid: 0bf318be9ed995e46a6f6796c3302693,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.248936
-      objectReference: {fileID: 0}
     - target: {fileID: 2961085483173872940, guid: 0bf318be9ed995e46a6f6796c3302693,
         type: 3}
       propertyPath: m_Name
       value: Drawbridge_Chains
       objectReference: {fileID: 0}
-    - target: {fileID: 3609388805373207801, guid: 0bf318be9ed995e46a6f6796c3302693,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9e0269bc11c85e74088fbdcfa213d22a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bf318be9ed995e46a6f6796c3302693, type: 3}
 --- !u!1001 &7316487635477803572
@@ -314,6 +292,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a4ba7e2990c1844b2edb51edb4793e, type: 3}
+--- !u!1 &1873892665935713503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9189601426140030699, guid: e7a4ba7e2990c1844b2edb51edb4793e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7316487635477803572}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1246010415712734821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8413803147399511121, guid: e7a4ba7e2990c1844b2edb51edb4793e,
