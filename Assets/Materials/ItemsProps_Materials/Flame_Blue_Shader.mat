@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Flame_Blue_Shader
   m_Shader: {fileID: 210, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: EFFECT_BUMP _ALPHABLEND_ON _COLORADDSUBDIFF_ON _EMISSION _FADING_ON
+  m_ShaderKeywords: EFFECT_BUMP _ALPHABLEND_ON _COLORADDSUBDIFF_ON _EMISSION
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -74,15 +74,15 @@ Material:
     - _EmissionEnabled: 1
     - _FlipbookMode: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.75
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _LightingEnabled: 1
-    - _Metallic: 0.51
+    - _Metallic: 0.55
     - _Mode: 4
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
-    - _SoftParticlesEnabled: 1
+    - _SoftParticlesEnabled: 0
     - _SoftParticlesFarFadeDistance: 1
     - _SoftParticlesNearFadeDistance: 0
     - _SpecularHighlights: 1
@@ -94,4 +94,4 @@ Material:
     - _Color: {r: 0, g: 0.20422697, b: 1, a: 1}
     - _ColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0.6657265, g: 0.6895024, b: 1.3968369, a: 1}
-    - _SoftParticleFadeParams: {r: 0, g: 1, b: 0, a: 0}
+    - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
