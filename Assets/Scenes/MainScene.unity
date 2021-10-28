@@ -1040,6 +1040,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor01_8x8 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5980632301137648947, guid: 5103c9d0366930b4bbeabb74a8575898,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a6d5304ab177414d87f8c53f8f2f26f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5103c9d0366930b4bbeabb74a8575898, type: 3}
 --- !u!4 &68359194 stripped
@@ -2636,6 +2641,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor01_8x8
       objectReference: {fileID: 0}
+    - target: {fileID: 5980632301137648947, guid: 5103c9d0366930b4bbeabb74a8575898,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a6d5304ab177414d87f8c53f8f2f26f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5103c9d0366930b4bbeabb74a8575898, type: 3}
 --- !u!1001 &140720699
@@ -27595,6 +27605,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor01_8x8 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5980632301137648947, guid: 5103c9d0366930b4bbeabb74a8575898,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a6d5304ab177414d87f8c53f8f2f26f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5103c9d0366930b4bbeabb74a8575898, type: 3}
 --- !u!1001 &1349135500
