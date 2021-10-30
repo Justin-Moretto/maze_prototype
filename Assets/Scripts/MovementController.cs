@@ -17,32 +17,10 @@ public class MovementController : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
 
-    private Inventory inventory;
-    private GameObject UI;
-    private DisplayGems _finalDoor;
-    public Vector3 checkpoint;
-    private GameObject _lastCheckpoint;
-    private GameObject _unlockedDoor;
-    private BlackoutTransition _blackoutTransition;
-
-    private List<string> respawnMessages = new List<string>
-    {
-        "You Died.",
-        "Ouf. That was Embarassing...",
-        "Newsflash: Lava kills you.",
-        "Come on, the Game's not that Hard.",
-        "Lmaoo git gud",
-        "Maybe Stick to playing Candy Crush",
-        "A Real Gamer Wouldn't Have Died There"
-    };
-
     void Awake()
     {
         character = GetComponent<CharacterController>();
-        inventory = gameObject.GetComponent<Inventory>();
-        UI = GameObject.Find("UI_Text");
-        _finalDoor = GameObject.Find("DoorEnd").GetComponent<DisplayGems>();
-        _blackoutTransition = GetComponentInChildren<BlackoutTransition>();
+        transform.rotation = Quaternion.Euler(0, -90, 0);
     }
 
     void Update()
@@ -53,7 +31,7 @@ public class MovementController : MonoBehaviour
 
         if (xMovement != 0 || zMovement != 0)
         {
-            Vector3 moveDirection = transform.right * xMovement * moveSpeed + transform.forward * zMovement * moveSpeed;
+            Vector3 moveDirection = (transform.right * xMovement * moveSpeed) + (transform.forward * zMovement * moveSpeed);
             character.Move(moveDirection * Time.deltaTime);
         }
 
@@ -69,110 +47,12 @@ public class MovementController : MonoBehaviour
         
         velocity.y += gravity * Time.deltaTime;
         character.Move(velocity * Time.deltaTime);
-
-        if (character.transform.position.y < -60) Respawn();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        GameObject _gameObject = other.gameObject;
-
-        switch (_gameObject.tag)
-        {
-            case "MovingPlatform":
-                transform.parent = other.transform;
-                break;
-            case "Key":
-                inventory.AddKey();
-                Destroy(_gameObject);
-                DisplayMessage("Key Acquired");
-                break;
-            case "Door":
-                if (inventory.hasKey)
-                {
-                    var door = _gameObject.GetComponent<AnimateDoor>();
-                    inventory.UseKey();
-                    door.Open();
-                    DisplayMessage("Door Unlocked");
-                    _unlockedDoor = _gameObject;
-                } else if (_gameObject != _unlockedDoor)
-                {
-                    DisplayMessage("It's Locked");
-                }
-                break;
-            case "Lava":
-                _blackoutTransition.Play();
-                Invoke("Respawn", 1f);
-                break;
-            case "Bullet":
-                _blackoutTransition.Play();
-                Invoke("Respawn", 1f);
-                break;
-            case "Checkpoint":
-                checkpoint = character.transform.position;
-                if (_gameObject != _lastCheckpoint)
-                {
-                    _lastCheckpoint = _gameObject;
-                    DisplayMessage("Checkpoint Reached");
-                }
-                break;
-            case "Gem":
-                inventory.gems++;
-                Destroy(_gameObject);
-                DisplayMessage("Gem Acquired " + inventory.gems + " / 5");
-                string color = _gameObject.name.Split(char.Parse("_"))[1];
-                _finalDoor.AddGem(color);
-                break;
-            case "FinalDoor":
-                if (inventory.gems >= 5)
-                {
-                    var door = _gameObject.GetComponent<AnimateDoor>();
-                    door.Open();
-                    DisplayMessage("Door Unlocked");
-                    _unlockedDoor = _gameObject;
-                } else
-                {
-                    if (inventory.gems == 4)
-                    {
-                        DisplayMessage($"{5 - inventory.gems} Gem Required");
-                    } else
-                    {
-                        DisplayMessage($"{5 - inventory.gems} Gems Required");
-                    }
-                }
-                break;
-            case "EndZone":
-                //TODO: add a nice scene transition effect
-                UnityEditor.SceneManagement.EditorSceneManager.LoadScene("PrefabGarden");
-                Debug.Log("You win");
-                break;
-            case "Lever":
-                DisplayMessage("Lever Activated");
-                break;
-        }
-    }
-
-    private void Respawn()
-    {
-        transform.position = checkpoint;
-        transform.Translate(0, 4, 0);
-        transform.parent = null;
-        transform.rotation = Quaternion.Euler(0, -90, 0);
-        velocity.y -= 20;
-
-        int i = Random.Range(0, respawnMessages.Count);
-        DisplayMessage(respawnMessages[i]);
-    }
 
     private void OnTriggerExit(Collider other)
     {
             transform.parent = null;
     }
 
-    private void DisplayMessage(string text)
-    {
-        UI.GetComponent<Text>().text = text;
-        UI.GetComponent<Animator>().SetBool("FadeIn", true);
-        Debug.Log(text);
-    }
 }

@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &254836951
 Transform:
   m_ObjectHideFlags: 0
@@ -208,10 +208,11 @@ GameObject:
   - component: {fileID: 5545240012197091942}
   - component: {fileID: 5545240012197091941}
   - component: {fileID: 1690164750066642879}
+  - component: {fileID: 456170765286656179}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -346,6 +347,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasKey: 0
   gems: 0
+--- !u!114 &456170765286656179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5545240012197091951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a24eb9a42da85e428241c7522aab071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5545240013000920298
 GameObject:
   m_ObjectHideFlags: 0
