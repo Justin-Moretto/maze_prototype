@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5373708552695106233}
   - component: {fileID: 8734077386046292546}
   - component: {fileID: 8180794732976122807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor2Border_Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4780755591931636416}
   - component: {fileID: 4866135603278292833}
   - component: {fileID: 1848864978196238137}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor02_8x8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,8 +175,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8, y: 0.043744087, z: 8}
-  m_Center: {x: 0, y: 0.004494667, z: 0}
+  m_Size: {x: 8, y: 0, z: 8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &4866135603278292833
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 1604421081049067268}
   - component: {fileID: 86253932822110566}
   - component: {fileID: 3708090194137483116}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middle_Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 2678037532197146563}
   - component: {fileID: 5876633151099052603}
   - component: {fileID: 7960624643965476963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor2_Grout_8x8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
