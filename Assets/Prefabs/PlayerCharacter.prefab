@@ -121,7 +121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5545240012168037693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.037, z: 0}
+  m_LocalPosition: {x: 0, y: 0.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6413866421806045268}
@@ -332,7 +332,6 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
-  checkpoint: {x: 0, y: 0, z: 0}
 --- !u!114 &1690164750066642879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a24eb9a42da85e428241c7522aab071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpoint: {x: 0, y: 0, z: 0}
 --- !u!1 &5545240013000920298
 GameObject:
   m_ObjectHideFlags: 0
