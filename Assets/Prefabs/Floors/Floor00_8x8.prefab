@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7459250945236252793}
   - component: {fileID: 1378989288162645377}
   - component: {fileID: 3231060239063422937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor2_Grout_8x8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 4923490688534616472}
   - component: {fileID: 7185273285479525714}
   - component: {fileID: -8162684251670992072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor00_8x8
   m_TagString: Untagged
   m_Icon: {fileID: 0}

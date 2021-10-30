@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8494519338471538321}
   - component: {fileID: 1781358643507128329}
   - component: {fileID: 7679034385814224483}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor01_8x8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 5497217895619145748}
   - component: {fileID: 2620813829707233965}
   - component: {fileID: 3022816023841495186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 2169550275093194211}
   - component: {fileID: 3014907246292101432}
   - component: {fileID: 5980632301137648947}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fluid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 04fb15d69874c7b48868a7fab2cdf110, type: 2}
+  - {fileID: 2100000, guid: 3a6d5304ab177414d87f8c53f8f2f26f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 3432456691696092276}
   - component: {fileID: 7901974021448072508}
   - component: {fileID: 3830356271769114865}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Border1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 8956262192540167764}
   - component: {fileID: 9158586272570697347}
   - component: {fileID: 6221158788786115069}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grout1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +476,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2460733493656523431}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
