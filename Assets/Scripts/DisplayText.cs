@@ -8,7 +8,6 @@ public class DisplayText : MonoBehaviour
     private float timer = 0;
     private float displayTime = 1.5f;
 
-    // Start is called before the first frame update
     void Awake()
     {
         animator = GetComponent<Animator>();

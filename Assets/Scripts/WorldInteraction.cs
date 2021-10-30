@@ -51,10 +51,8 @@ public class WorldInteraction : MonoBehaviour
                 inventory.AddKey();
                 Destroy(_gameObject);
                 DisplayMessage("Key Acquired");
-                Debug.Log(inventory.hasKey);
                 break;
             case "Door":
-                Debug.Log(inventory.hasKey);
                 if (inventory.hasKey)
                 {
                     var door = _gameObject.GetComponent<AnimateDoor>();
