@@ -4806,7 +4806,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.49803922, b: 0, a: 1}
+  m_Color: {r: 0.65, g: 0.32670155, b: 0, a: 1}
   m_Intensity: 8
   m_Range: 8
   m_SpotAngle: 30
@@ -4967,8 +4967,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2445672, y: 1.7450302, z: 1.2445672}
-  m_Center: {x: 0, y: 0.8725151, z: 0}
+  m_Size: {x: 1.2445672, y: 5.540264, z: 1.2445672}
+  m_Center: {x: -8.307048e-17, y: 2.770132, z: -3.9138277e-16}
 --- !u!1001 &25322495365139657
 PrefabInstance:
   m_ObjectHideFlags: 0
