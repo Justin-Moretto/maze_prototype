@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimateDoor : MonoBehaviour
 {
     public Component[] Doors;
+    public AudioClip sfx_door;
 
     void Awake()
     {
@@ -18,5 +19,6 @@ public class AnimateDoor : MonoBehaviour
             door.SetBool("M2DoorLeftOpen", true);
             door.SetBool("M2DoorRightOpen", true);
         }
+        gameObject.GetComponent<AudioSource>().PlayOneShot(sfx_door, 0.8f);
     }
 }

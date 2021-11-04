@@ -23,7 +23,6 @@ public class BlackoutTransition : MonoBehaviour
         if (fadeIn || !fadeIn && transparency > 0)
         {
             transparency += (fadeIn ? 3f : -1.5f) * Time.deltaTime;
-            Debug.Log("transparency: " + transparency);
             _blackout.color = new Color(0, 0, 0, transparency);
         }
 

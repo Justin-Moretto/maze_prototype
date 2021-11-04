@@ -10,11 +10,16 @@ public class WorldInteraction : MonoBehaviour
 
     private Inventory inventory;
     private GameObject UI;
+    private AudioSource Audio;
+
     private DisplayGems _finalDoor;
     public Vector3 checkpoint;
     private GameObject _lastCheckpoint;
     private GameObject _unlockedDoor;
     private BlackoutTransition _blackoutTransition;
+
+    [SerializeField] AudioClip _collectable;
+    [SerializeField] AudioClip _death;
 
     private List<string> respawnMessages = new List<string>
     {
@@ -32,8 +37,11 @@ public class WorldInteraction : MonoBehaviour
         character = GetComponent<CharacterController>();
         inventory = gameObject.GetComponent<Inventory>();
         UI = GameObject.Find("UI_Text");
+        Audio = gameObject.GetComponent<AudioSource>();
+
         _finalDoor = GameObject.Find("DoorEnd").GetComponent<DisplayGems>();
         _blackoutTransition = GetComponentInChildren<BlackoutTransition>();
+
 
         checkpoint = character.transform.position;
     }
@@ -50,6 +58,7 @@ public class WorldInteraction : MonoBehaviour
             case "Key":
                 inventory.AddKey();
                 Destroy(_gameObject);
+                Audio.PlayOneShot(_collectable, 0.4f);
                 DisplayMessage("Key Acquired");
                 break;
             case "Door":
@@ -68,10 +77,12 @@ public class WorldInteraction : MonoBehaviour
                 break;
             case "Lava":
                 _blackoutTransition.Play();
+                Audio.PlayOneShot(_death, 0.4f);
                 Invoke("Respawn", 1f);
                 break;
             case "Bullet":
                 _blackoutTransition.Play();
+                Audio.PlayOneShot(_death, 0.4f);
                 Invoke("Respawn", 1f);
                 break;
             case "Checkpoint":
@@ -86,6 +97,7 @@ public class WorldInteraction : MonoBehaviour
                 inventory.gems++;
                 Destroy(_gameObject);
                 DisplayMessage("Gem Acquired " + inventory.gems + " / 5");
+                Audio.PlayOneShot(_collectable, 0.4f);
                 string color = _gameObject.name.Split(char.Parse("_"))[1];
                 _finalDoor.AddGem(color);
                 break;
@@ -111,8 +123,8 @@ public class WorldInteraction : MonoBehaviour
                 break;
             case "EndZone":
                 //TODO: add a nice scene transition effect
+                _blackoutTransition.Play();
                 UnityEditor.SceneManagement.EditorSceneManager.LoadScene("PrefabGarden");
-                Debug.Log("You win");
                 break;
             case "Lever":
                 DisplayMessage("Lever Activated");
@@ -141,7 +153,6 @@ public class WorldInteraction : MonoBehaviour
     {
         UI.GetComponent<Text>().text = text;
         UI.GetComponent<Animator>().SetBool("FadeIn", true);
-        Debug.Log(text);
     }
 
     private void Update()

@@ -17,6 +17,7 @@ public class MovementController : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
 
+    [SerializeField] AudioClip _footsteps;
     void Awake()
     {
         character = GetComponent<CharacterController>();
