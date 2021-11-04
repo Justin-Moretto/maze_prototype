@@ -34197,7 +34197,7 @@ PrefabInstance:
     - target: {fileID: 1708643660819508825, guid: 21dbde5a459af6e459c830e5c61460e8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1708643660819508825, guid: 21dbde5a459af6e459c830e5c61460e8,
         type: 3}
@@ -53419,7 +53419,7 @@ PrefabInstance:
     - target: {fileID: 4266590426903510921, guid: b1b9e2d83947ea94ea3efec02bc96091,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4266590426903510921, guid: b1b9e2d83947ea94ea3efec02bc96091,
         type: 3}
@@ -59063,7 +59063,7 @@ GameObject:
   - component: {fileID: 1487730137}
   m_Layer: 0
   m_Name: Lava (3)
-  m_TagString: Lava
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59089,8 +59089,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487730136}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.0605776, y: 8.423722, z: 1.1106582}
   m_Center: {x: -0.0045938697, y: -3.7118607, z: -0.02802799}
@@ -59149,7 +59149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487730136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.39, y: -21.5, z: 0}
+  m_LocalPosition: {x: -44.39, y: -24.9, z: 0}
   m_LocalScale: {x: 48.999313, y: 3.076017, z: 32.99173}
   m_Children: []
   m_Father: {fileID: 0}
@@ -66988,7 +66988,7 @@ PrefabInstance:
     - target: {fileID: 8078476246903875834, guid: d1849b6dc22e2b5409a47070aeef8d24,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8078476246903875834, guid: d1849b6dc22e2b5409a47070aeef8d24,
         type: 3}
@@ -74040,7 +74040,7 @@ PrefabInstance:
     - target: {fileID: 5793518433546235294, guid: 462b70c9203153e4a801099f52768510,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5793518433546235294, guid: 462b70c9203153e4a801099f52768510,
         type: 3}

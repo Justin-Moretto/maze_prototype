@@ -90,7 +90,7 @@ public class WorldInteraction : MonoBehaviour
                 _finalDoor.AddGem(color);
                 break;
             case "FinalDoor":
-                if (inventory.gems >= 5)
+                if (inventory.gems >= 5 && _unlockedDoor != _gameObject)
                 {
                     var door = _gameObject.GetComponent<AnimateDoor>();
                     door.Open();
