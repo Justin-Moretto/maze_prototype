@@ -10,7 +10,8 @@ public class WorldInteraction : MonoBehaviour
 
     private Inventory inventory;
     private GameObject UI;
-    private AudioSource Audio;
+    [SerializeField] GameObject audioSource;
+    private AudioSource sfx;
 
     private DisplayGems _finalDoor;
     public Vector3 checkpoint;
@@ -36,12 +37,11 @@ public class WorldInteraction : MonoBehaviour
     {
         character = GetComponent<CharacterController>();
         inventory = gameObject.GetComponent<Inventory>();
-        UI = GameObject.Find("UI_Text");
-        Audio = gameObject.GetComponent<AudioSource>();
+        UI = GameObject.Find("UI_Text");;
 
         _finalDoor = GameObject.Find("DoorEnd").GetComponent<DisplayGems>();
         _blackoutTransition = GetComponentInChildren<BlackoutTransition>();
-
+        sfx = audioSource.GetComponent<AudioSource>();
 
         checkpoint = character.transform.position;
     }
@@ -58,7 +58,7 @@ public class WorldInteraction : MonoBehaviour
             case "Key":
                 inventory.AddKey();
                 Destroy(_gameObject);
-                Audio.PlayOneShot(_collectable, 0.4f);
+                sfx.PlayOneShot(_collectable, 0.1f);
                 DisplayMessage("Key Acquired");
                 break;
             case "Door":
@@ -77,12 +77,12 @@ public class WorldInteraction : MonoBehaviour
                 break;
             case "Lava":
                 _blackoutTransition.Play();
-                Audio.PlayOneShot(_death, 0.4f);
+                sfx.PlayOneShot(_death, 0.13f);
                 Invoke("Respawn", 1f);
                 break;
             case "Bullet":
                 _blackoutTransition.Play();
-                Audio.PlayOneShot(_death, 0.4f);
+                sfx.PlayOneShot(_death, 0.13f);
                 Invoke("Respawn", 1f);
                 break;
             case "Checkpoint":
@@ -97,7 +97,7 @@ public class WorldInteraction : MonoBehaviour
                 inventory.gems++;
                 Destroy(_gameObject);
                 DisplayMessage("Gem Acquired " + inventory.gems + " / 5");
-                Audio.PlayOneShot(_collectable, 0.4f);
+                sfx.PlayOneShot(_collectable, 0.1f);
                 string color = _gameObject.name.Split(char.Parse("_"))[1];
                 _finalDoor.AddGem(color);
                 break;

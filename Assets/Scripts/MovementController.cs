@@ -18,10 +18,12 @@ public class MovementController : MonoBehaviour
     private bool isGrounded;
 
     [SerializeField] AudioClip _footsteps;
+    AudioSource Audio;
     void Awake()
     {
         character = GetComponent<CharacterController>();
         transform.rotation = Quaternion.Euler(0, -90, 0);
+        Audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -34,6 +36,13 @@ public class MovementController : MonoBehaviour
         {
             Vector3 moveDirection = (transform.right * xMovement * moveSpeed) + (transform.forward * zMovement * moveSpeed);
             character.Move(moveDirection * Time.deltaTime);
+            if (isGrounded && Audio.isPlaying == false)
+            {
+                Audio.PlayOneShot(_footsteps, 0.15f);
+            }
+        } else if (isGrounded == false || (xMovement == 0 && zMovement == 0))
+        {
+            Audio.Stop();
         }
 
         //jumping & falling
