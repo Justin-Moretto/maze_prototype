@@ -109,7 +109,7 @@ public class WorldInteraction : MonoBehaviour
                     DisplayMessage("Door Unlocked");
                     _unlockedDoor = _gameObject;
                 }
-                else
+                else if (_unlockedDoor != _gameObject)
                 {
                     if (inventory.gems == 4)
                     {
@@ -122,14 +122,18 @@ public class WorldInteraction : MonoBehaviour
                 }
                 break;
             case "EndZone":
-                //TODO: add a nice scene transition effect
                 _blackoutTransition.Play();
-                UnityEditor.SceneManagement.EditorSceneManager.LoadScene("PrefabGarden");
+                Invoke("GoToEndScreen", 1f);
                 break;
             case "Lever":
                 DisplayMessage("Lever Activated");
                 break;
         }
+    }
+
+    private void GoToEndScreen()
+    {
+        UnityEditor.SceneManagement.EditorSceneManager.LoadScene("PrefabGarden");
     }
 
     private void Respawn()
