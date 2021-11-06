@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Key_FX_Mat
   m_Shader: {fileID: 210, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHABLEND_ON _FADING_ON
+  m_ShaderKeywords: _ALPHABLEND_ON _FADING_ON _REQUIRE_UV2
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -38,11 +38,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e086e53cd985f354c88f891c731a1cb6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: fe344b455de0dbe48a6ecfac63fdf84a, type: 3}
+        m_Texture: {fileID: 2800000, guid: e086e53cd985f354c88f891c731a1cb6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -68,29 +68,29 @@ Material:
     - _DetailNormalMapScale: 1
     - _DistortionBlend: 0.5
     - _DistortionEnabled: 0
-    - _DistortionStrength: 1
-    - _DistortionStrengthScaled: 0.1
+    - _DistortionStrength: 0.26
+    - _DistortionStrengthScaled: 0.025999999
     - _DstBlend: 1
     - _EmissionEnabled: 0
-    - _FlipbookMode: 0
+    - _FlipbookMode: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.68
     - _GlossyReflections: 1
     - _LightingEnabled: 1
-    - _Metallic: 0.85
+    - _Metallic: 0.4
     - _Mode: 4
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SoftParticlesEnabled: 1
     - _SoftParticlesFarFadeDistance: 0
-    - _SoftParticlesNearFadeDistance: 1
+    - _SoftParticlesNearFadeDistance: 2.5
     - _SpecularHighlights: 1
     - _SrcBlend: 5
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0.9069258, g: 1, b: 0, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SoftParticleFadeParams: {r: 1, g: -1, b: 0, a: 0}
+    - _Color: {r: 4.150567, g: 2.016549, b: 3.2097633, a: 0.015686275}
+    - _EmissionColor: {r: 0, g: 0.39190885, b: 0.8603976, a: 1}
+    - _SoftParticleFadeParams: {r: 2.5, g: -0.4, b: 0, a: 0}

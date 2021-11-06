@@ -30267,36 +30267,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor01_8x8 (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 4411049860469182680, guid: 5103c9d0366930b4bbeabb74a8575898,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980632301137648947, guid: 5103c9d0366930b4bbeabb74a8575898,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 04fb15d69874c7b48868a7fab2cdf110, type: 2}
-    - target: {fileID: 7606309187184728910, guid: 5103c9d0366930b4bbeabb74a8575898,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7733393557675264084, guid: 5103c9d0366930b4bbeabb74a8575898,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7852137882459964655, guid: 5103c9d0366930b4bbeabb74a8575898,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7958881961212471733, guid: 5103c9d0366930b4bbeabb74a8575898,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5103c9d0366930b4bbeabb74a8575898, type: 3}
 --- !u!4 &724137464 stripped
