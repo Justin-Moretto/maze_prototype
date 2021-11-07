@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WorldInteraction : MonoBehaviour
 {
@@ -133,7 +134,7 @@ public class WorldInteraction : MonoBehaviour
 
     private void GoToEndScreen()
     {
-        UnityEditor.SceneManagement.EditorSceneManager.LoadScene("PrefabGarden");
+        //UnityEditor.SceneManagement.EditorSceneManager.LoadScene("PrefabGarden");
     }
 
     private void Respawn()
