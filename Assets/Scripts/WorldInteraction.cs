@@ -19,6 +19,7 @@ public class WorldInteraction : MonoBehaviour
     private GameObject _lastCheckpoint;
     private GameObject _unlockedDoor;
     private BlackoutTransition _blackoutTransition;
+    private bool isRespawning = false;
 
     [SerializeField] AudioClip _collectable;
     [SerializeField] AudioClip _death;
@@ -77,14 +78,22 @@ public class WorldInteraction : MonoBehaviour
                 }
                 break;
             case "Lava":
-                _blackoutTransition.Play();
-                sfx.PlayOneShot(_death, 0.13f);
-                Invoke("Respawn", 1f);
+                if (!isRespawning)
+                {
+                    isRespawning = true;
+                    _blackoutTransition.Play();
+                    sfx.PlayOneShot(_death, 0.13f);
+                    Invoke("Respawn", 1f);
+                }
                 break;
             case "Bullet":
-                _blackoutTransition.Play();
-                sfx.PlayOneShot(_death, 0.13f);
-                Invoke("Respawn", 1f);
+                if (!isRespawning)
+                {
+                    isRespawning = true;
+                    _blackoutTransition.Play();
+                    sfx.PlayOneShot(_death, 0.13f);
+                    Invoke("Respawn", 1f);
+                }
                 break;
             case "Checkpoint":
                 checkpoint = character.transform.position;
@@ -147,6 +156,7 @@ public class WorldInteraction : MonoBehaviour
 
         int i = Random.Range(0, respawnMessages.Count);
         DisplayMessage(respawnMessages[i]);
+        isRespawning = false;
     }
 
     private void OnTriggerExit(Collider other)
