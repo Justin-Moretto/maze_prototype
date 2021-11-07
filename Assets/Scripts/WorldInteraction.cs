@@ -134,7 +134,7 @@ public class WorldInteraction : MonoBehaviour
 
     private void GoToEndScreen()
     {
-        //UnityEditor.SceneManagement.EditorSceneManager.LoadScene("PrefabGarden");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("PrefabGarden");
     }
 
     private void Respawn()

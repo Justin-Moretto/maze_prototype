@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1639326355282701003}
   - component: {fileID: 1639326355282701002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Drawbridge_Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639326355282700997}
-  m_LocalRotation: {x: -0.034899585, y: 0.99939084, z: -0, w: 0}
+  m_LocalRotation: {x: 0.034899585, y: -0.99939084, z: -0.000000009802605, w: 0.00000028070917}
   m_LocalPosition: {x: -78.82, y: -1.27, z: -0.09}
-  m_LocalScale: {x: 0.94, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1246010415712734821}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: -4}
 --- !u!95 &1639326355282701002
 Animator:
   serializedVersion: 3
@@ -75,6 +75,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DB_Bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250394428249330915, guid: 9909572cff7f5154e8dc679ffa4f12f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1878453730246757977, guid: 9909572cff7f5154e8dc679ffa4f12f6,
         type: 3}
@@ -131,6 +136,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 3296142493402431996, guid: 9909572cff7f5154e8dc679ffa4f12f6,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5293391123211904250, guid: e472016b776c47043bb3c244b1aa8ed7,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9909572cff7f5154e8dc679ffa4f12f6, type: 3}
 --- !u!1001 &3681275968809540690
@@ -140,15 +151,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246010415712734821}
     m_Modifications:
+    - target: {fileID: 1581863767528591411, guid: 0bf318be9ed995e46a6f6796c3302693,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3847964600903405737, guid: 213ec401a18723749b068eddf8620523,
+        type: 3}
     - target: {fileID: 2475910118090563478, guid: 0bf318be9ed995e46a6f6796c3302693,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.167
+      value: -15.31
       objectReference: {fileID: 0}
     - target: {fileID: 2475910118090563478, guid: 0bf318be9ed995e46a6f6796c3302693,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.343
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 2475910118090563478, guid: 0bf318be9ed995e46a6f6796c3302693,
         type: 3}
@@ -200,6 +217,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Drawbridge_Chains
       objectReference: {fileID: 0}
+    - target: {fileID: 2961085483173872940, guid: 0bf318be9ed995e46a6f6796c3302693,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bf318be9ed995e46a6f6796c3302693, type: 3}
 --- !u!1001 &7316487635477803572
@@ -224,7 +246,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 50833bc54a0440740b1160fabaeda730, type: 2}
+      objectReference: {fileID: 2100000, guid: 37b94775c11c38b40bd3ab3cb16f410d, type: 2}
     - target: {fileID: 7244314598534301502, guid: e7a4ba7e2990c1844b2edb51edb4793e,
         type: 3}
       propertyPath: m_Materials.Array.data[6]
@@ -289,6 +311,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Drawbridge
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189601426140030699, guid: e7a4ba7e2990c1844b2edb51edb4793e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a4ba7e2990c1844b2edb51edb4793e, type: 3}
