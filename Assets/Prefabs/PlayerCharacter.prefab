@@ -431,6 +431,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   _footsteps: {fileID: 8300000, guid: e160d37b6d181484487e8c8656fa813b, type: 3}
+  _thud: {fileID: 8300000, guid: 2060c9a6df7eecf47bc4102447c30bdc, type: 3}
 --- !u!114 &1690164750066642879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,7 +460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 5545240012168037693}
   checkpoint: {x: 0, y: 0, z: 0}
-  _collectable: {fileID: 8300000, guid: 0753cb7e05a62f24d923c8f40018ec41, type: 3}
+  _collectable: {fileID: 8300000, guid: 0256d9ff6ac8e4f44891ed183277c731, type: 3}
   _death: {fileID: 8300000, guid: 665592e02a542874eaff92c466e56da2, type: 3}
 --- !u!82 &6301732379637594107
 AudioSource:

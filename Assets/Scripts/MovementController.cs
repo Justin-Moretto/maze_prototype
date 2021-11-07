@@ -16,8 +16,11 @@ public class MovementController : MonoBehaviour
     private CharacterController character = null;
     private Vector3 velocity;
     private bool isGrounded;
+    private bool isAirborn;
 
     [SerializeField] AudioClip _footsteps;
+    [SerializeField] AudioClip _thud;
+
     AudioSource Audio;
     void Awake()
     {
@@ -38,7 +41,7 @@ public class MovementController : MonoBehaviour
             character.Move(moveDirection * Time.deltaTime);
             if (isGrounded && Audio.isPlaying == false)
             {
-                Audio.PlayOneShot(_footsteps, 0.15f);
+                Audio.PlayOneShot(_footsteps, 0.25f);
             }
         } else if (isGrounded == false || (xMovement == 0 && zMovement == 0))
         {
@@ -54,7 +57,7 @@ public class MovementController : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
-        
+  
         velocity.y += gravity * Time.deltaTime;
         character.Move(velocity * Time.deltaTime);
     }
