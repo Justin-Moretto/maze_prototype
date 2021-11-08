@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class StartGame : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     void Update()
     {
         if (Input.GetButtonDown("Jump"))
