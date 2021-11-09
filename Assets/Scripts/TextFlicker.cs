@@ -8,6 +8,7 @@ public class TextFlicker : MonoBehaviour
     Text text;
     float a = 1;
     bool toggle = true;
+    [SerializeField] Image aButton;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class TextFlicker : MonoBehaviour
     {
         a += (toggle ? -1 : 1) * Time.deltaTime;
         text.color = new Color(1, 0.73f, 0, a);
+        aButton.color = new Color(1, 1, 1, a);
         if (a < 0) toggle = false;
         if (a > 1) toggle = true;
     }
