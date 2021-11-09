@@ -15,6 +15,7 @@ TagManager:
   - FinalDoor
   - EndZone
   - Lever
+  - Chest
   layers:
   - Default
   - TransparentFX
