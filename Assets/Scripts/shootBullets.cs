@@ -5,6 +5,8 @@ using UnityEngine;
 public class shootBullets : MonoBehaviour
 {
     public GameObject bullet;
+    public AudioClip sfx_fire;
+    AudioSource Audio;
 
     public float firingSpeed = 500;
     public float projectileSpeed = 6;
@@ -15,6 +17,7 @@ public class shootBullets : MonoBehaviour
     void Awake()
     {
         shotInterval = 500 / firingSpeed;
+        Audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -25,6 +28,7 @@ public class shootBullets : MonoBehaviour
         if (timer >= shotInterval)
         {
             var shot = Instantiate(bullet, transform.transform);
+            Audio.PlayOneShot(sfx_fire, 0.18f);
             shot.GetComponent<BulletMove>().velocity = projectileSpeed;
             timer = 0;
         }

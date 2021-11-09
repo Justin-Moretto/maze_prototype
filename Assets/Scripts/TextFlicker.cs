@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class TextFlicker : MonoBehaviour
 {
     Text text;
-    float a = 255;
+    float a = 1;
+    bool toggle = true;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,9 @@ public class TextFlicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //a -= Time.deltaTime;
-        //text.color = new Color(255, 165, 0, a);
+        a += (toggle ? -1 : 1) * Time.deltaTime;
+        text.color = new Color(1, 0.73f, 0, a);
+        if (a < 0) toggle = false;
+        if (a > 1) toggle = true;
     }
 }
