@@ -13,5 +13,5 @@ Bryan Internoscia
 Benoit Girard  
 Olivier Alarie  
 
-textures, 3D models & animation by Bryan Internoscia.
+textures, 3D models & animation by Bryan Internoscia.   
 sfx from Justin Moretto, Dark Souls, Youtube & Free Audio Zone.
