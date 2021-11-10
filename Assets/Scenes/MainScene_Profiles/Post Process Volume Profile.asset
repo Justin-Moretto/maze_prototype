@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
   m_Name: Grain
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -21,7 +21,7 @@ MonoBehaviour:
     value: 0
   intensity:
     overrideState: 1
-    value: 0.1
+    value: 0.15
   size:
     overrideState: 0
     value: 1
@@ -228,7 +228,7 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 2
+    value: 1.9
   aperture:
     overrideState: 1
     value: 9.75
@@ -345,10 +345,10 @@ MonoBehaviour:
     value: {x: 0.9344658, y: 1, z: 0.97817284, w: -0.000000097118466}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 0.7466124, z: 0.9366526, w: 0.37533507}
+    value: {x: 1, y: 0.81750447, z: 0.9775208, w: -0.08431691}
   gain:
     overrideState: 1
-    value: {x: 1, y: 0.64508593, z: 0.6825889, w: 0.5361931}
+    value: {x: 1, y: 0.64508593, z: 0.6825889, w: 0.16519806}
   masterCurve:
     overrideState: 0
     value:
