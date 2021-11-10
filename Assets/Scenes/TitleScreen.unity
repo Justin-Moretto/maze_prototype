@@ -6994,7 +6994,7 @@ GameObject:
   - component: {fileID: 1477710105}
   - component: {fileID: 1477710104}
   m_Layer: 5
-  m_Name: Image
+  m_Name: A_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7601,7 +7601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7231f12e6f85424aa74315e32548935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aButton: {fileID: 0}
+  aButton: {fileID: 1477710104}
 --- !u!1001 &1658831050
 PrefabInstance:
   m_ObjectHideFlags: 0
