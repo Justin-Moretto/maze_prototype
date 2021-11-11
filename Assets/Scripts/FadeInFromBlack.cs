@@ -17,7 +17,7 @@ public class FadeInFromBlack : MonoBehaviour
     {
         if (transparency > 0)
         {
-            transparency -= Time.deltaTime/5;
+            transparency -= Time.deltaTime/4;
             _blackout.color = new Color(0, 0, 0, transparency);
         }
     }

@@ -60,7 +60,7 @@ public class WorldInteraction : MonoBehaviour
             case "Key":
                 inventory.AddKey();
                 Destroy(_gameObject);
-                sfx.PlayOneShot(_collectable, 0.1f);
+                sfx.PlayOneShot(_collectable, 0.12f);
                 DisplayMessage("Key Acquired");
                 break;
             case "Door":
@@ -82,7 +82,7 @@ public class WorldInteraction : MonoBehaviour
                 {
                     isRespawning = true;
                     _blackoutTransition.Play();
-                    sfx.PlayOneShot(_death, 0.13f);
+                    sfx.PlayOneShot(_death, 0.22f);
                     Invoke("Respawn", 1f);
                 }
                 break;
@@ -91,7 +91,7 @@ public class WorldInteraction : MonoBehaviour
                 {
                     isRespawning = true;
                     _blackoutTransition.Play();
-                    sfx.PlayOneShot(_death, 0.13f);
+                    sfx.PlayOneShot(_death, 0.22f);
                     Invoke("Respawn", 1f);
                 }
                 break;
@@ -107,7 +107,7 @@ public class WorldInteraction : MonoBehaviour
                 inventory.gems++;
                 Destroy(_gameObject);
                 DisplayMessage("Gem Acquired " + inventory.gems + " / 5");
-                sfx.PlayOneShot(_collectable, 0.1f);
+                sfx.PlayOneShot(_collectable, 0.12f);
                 string color = _gameObject.name.Split(char.Parse("_"))[1];
                 _finalDoor.AddGem(color);
                 break;
@@ -132,6 +132,7 @@ public class WorldInteraction : MonoBehaviour
                 }
                 break;
             case "EndZone":
+                sfx.PlayOneShot(_collectable, 0.15f);
                 _blackoutTransition.Play();
                 Invoke("GoToEndScreen", 1f);
                 break;

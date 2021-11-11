@@ -42,7 +42,7 @@ public class MovementController : MonoBehaviour
             character.Move(moveDirection * Time.deltaTime);
             if (isGrounded && Audio.isPlaying == false)
             {
-                Audio.PlayOneShot(_footsteps, 0.3f);
+                Audio.PlayOneShot(_footsteps, 0.6f);
             } else if (!isJumping && !isGrounded)
             {
                 Audio.Stop();
@@ -58,7 +58,7 @@ public class MovementController : MonoBehaviour
             velocity.y = -2f;
             if (isJumping)
             {
-                Audio.PlayOneShot(_thud, 0.2f);
+                Audio.PlayOneShot(_thud, 0.4f);
                 isJumping = false;
             }
         }
@@ -66,7 +66,7 @@ public class MovementController : MonoBehaviour
         {
             isJumping = true;
             Audio.Stop();
-            Audio.PlayOneShot(_jump, 0.1f);
+            Audio.PlayOneShot(_jump, 0.2f);
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
   

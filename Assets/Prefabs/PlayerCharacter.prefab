@@ -463,6 +463,7 @@ MonoBehaviour:
   checkpoint: {x: 0, y: 0, z: 0}
   _collectable: {fileID: 8300000, guid: 0256d9ff6ac8e4f44891ed183277c731, type: 3}
   _death: {fileID: 8300000, guid: a9bfe94022704af4fb4b36442fbd21f9, type: 3}
+  _victory: {fileID: 8300000, guid: c7f516fe61550da4fbc65acdaa10dc4e, type: 3}
 --- !u!82 &6301732379637594107
 AudioSource:
   m_ObjectHideFlags: 0
